@@ -1,0 +1,96 @@
+{
+  "site": {
+    "name": "Bostad & Bolån",
+    "tagline": "Guider för första bostadsköpet i Sverige"
+  },
+  "nav": {
+    "fundamentals": "Grundläggande",
+    "news": "Marknadsnytt",
+    "planner": "Investeringsplanerare",
+    "skipToContent": "Hoppa till innehåll"
+  },
+  "home": {
+    "heroTitle": "Förstå bolån och bostadsköp i Sverige",
+    "heroSubtitle": "Sju grundguider för förstagångsköpare — plus aktuella nyheter om bostadsmarknaden i Stockholm och riket.",
+    "fundamentalsTitle": "Grundläggande guider",
+    "fundamentalsIntro": "Börja här för att förstå bolån, kostnader och köpprocessen innan du går på visning.",
+    "viewAllFundamentals": "Se alla grundguider",
+    "newsTitle": "Senaste marknadsnytt",
+    "newsIntro": "Korta uppdateringar om räntor, priser och trender — enkla att följa när du planerar köp.",
+    "viewAllNews": "Alla nyheter",
+    "plannerTitle": "Investeringsplanerare",
+    "plannerDescription": "Testa scenarier för kontantinsats, månadskostnad och amortering — verktyget kommer snart.",
+    "plannerCta": "Öppna planeraren"
+  },
+  "fundamentals": {
+    "title": "Grundläggande om bolån och bostad",
+    "intro": "Dessa sju artiklar täcker det viktigaste för förstagångsköpare: från bolåns villkor till due diligence i bostadsrättsföreningen.",
+    "readArticle": "Läs artikel",
+    "backToHub": "Tillbaka till översikten",
+    "prev": "Föregående",
+    "next": "Nästa"
+  },
+  "news": {
+    "title": "Marknadsnytt",
+    "intro": "Uppdateringar om bostadsmarknaden i Stockholm och Sverige.",
+    "readMore": "Läs mer",
+    "source": "Källa",
+    "backToNews": "Tillbaka till nyheter"
+  },
+  "planner": {
+    "title": "Investeringsplanerare",
+    "subtitle": "Planera ditt bostadsköp med tydliga siffror",
+    "description": "Här kommer du snart kunna räkna på lånebelopp, ränta, amortering och månadskostnad. Verktyget byggs som en separat React-app och bäddas in på denna sida.",
+    "comingSoon": "Kommer snart",
+    "placeholderNote": "Plats reserverad för din investeringsplanerare (#investment-planner-root)."
+  },
+  "footer": {
+    "disclaimer": "Innehållet är utbildande och utgör inte finansiell rådgivning.",
+    "notAdvice": "Inte finansiell rådgivning",
+    "privacy": "Integritet",
+    "contact": "Kontakt"
+  },
+  "legal": {
+    "notAdviceTitle": "Inte finansiell rådgivning",
+    "notAdviceBody": "Informationen på denna webbplats är allmän och utbildande. Kontakta bank, mäklare eller oberoende rådgivare för beslut som gäller din ekonomi.",
+    "privacyTitle": "Integritet",
+    "privacyBody": "Vi samlar inte in personuppgifter via grundguiderna. Om investeringsplaneraren läggs till kan cookies eller analys användas — då uppdateras denna sida.",
+    "contactTitle": "Kontakt",
+    "contactBody": "För frågor om webbplatsen, använd kontaktuppgifterna du anger vid lansering."
+  },
+  "breadcrumb": {
+    "home": "Start",
+    "fundamentals": "Grundläggande",
+    "news": "Marknadsnytt"
+  },
+  "articles": {
+    "bolan-grunder": {
+      "cardTitle": "Så fungerar bolån",
+      "cardDescription": "Ränta, bindningstid och vad banken tittar på."
+    },
+    "kontantinsats-skuldkvot": {
+      "cardTitle": "Kontantinsats och skuldkvot",
+      "cardDescription": "Krav, buffert och hur skuldkvot räknas."
+    },
+    "bostadsratt-vs-villa": {
+      "cardTitle": "Bostadsrätt eller villa",
+      "cardDescription": "Avgift, förening och skillnader i ägande."
+    },
+    "budget-total-kostnad": {
+      "cardTitle": "Budget och total kostnad",
+      "cardDescription": "Månadskostnad, amortering och oväntade utgifter."
+    },
+    "kopprocessen-budgivning": {
+      "cardTitle": "Köpprocess och budgivning",
+      "cardDescription": "Från visning till tillträde i praktiken."
+    },
+    "due-diligence-forening": {
+      "cardTitle": "Due diligence i föreningen",
+      "cardDescription": "Årsredovisning, underhållsplan och varningssignaler."
+    },
+    "forsta-gangskopare-stod": {
+      "cardTitle": "Förstagångsköpare",
+      "cardDescription": "Stöd, ränteavdrag och vanliga missförstånd."
+    }
+  }
+}

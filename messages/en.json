@@ -1,0 +1,96 @@
+{
+  "site": {
+    "name": "Home & Mortgage",
+    "tagline": "Guides for first-time buyers in Sweden"
+  },
+  "nav": {
+    "fundamentals": "Fundamentals",
+    "news": "Market updates",
+    "planner": "Investment planner",
+    "skipToContent": "Skip to content"
+  },
+  "home": {
+    "heroTitle": "Understand mortgages and buying a home in Sweden",
+    "heroSubtitle": "Seven foundational guides for first-time buyers — plus the latest on the Stockholm and national housing market.",
+    "fundamentalsTitle": "Foundational guides",
+    "fundamentalsIntro": "Start here to learn about mortgages, costs, and the buying process before you go to viewings.",
+    "viewAllFundamentals": "View all guides",
+    "newsTitle": "Latest market updates",
+    "newsIntro": "Short updates on rates, prices, and trends while you plan your purchase.",
+    "viewAllNews": "All updates",
+    "plannerTitle": "Investment planner",
+    "plannerDescription": "Try scenarios for down payment, monthly cost, and amortization — the tool is coming soon.",
+    "plannerCta": "Open planner"
+  },
+  "fundamentals": {
+    "title": "Mortgage and home-buying fundamentals",
+    "intro": "These seven articles cover what first-time buyers need most: from loan terms to due diligence in housing cooperatives.",
+    "readArticle": "Read article",
+    "backToHub": "Back to overview",
+    "prev": "Previous",
+    "next": "Next"
+  },
+  "news": {
+    "title": "Market updates",
+    "intro": "News on the housing market in Stockholm and Sweden.",
+    "readMore": "Read more",
+    "source": "Source",
+    "backToNews": "Back to updates"
+  },
+  "planner": {
+    "title": "Investment planner",
+    "subtitle": "Plan your purchase with clear numbers",
+    "description": "Soon you will be able to model loan amount, interest, amortization, and monthly cost. The tool will be built as a separate React app embedded on this page.",
+    "comingSoon": "Coming soon",
+    "placeholderNote": "Reserved mount point for your investment planner (#investment-planner-root)."
+  },
+  "footer": {
+    "disclaimer": "Content is educational and is not financial advice.",
+    "notAdvice": "Not financial advice",
+    "privacy": "Privacy",
+    "contact": "Contact"
+  },
+  "legal": {
+    "notAdviceTitle": "Not financial advice",
+    "notAdviceBody": "Information on this site is general and educational. Contact your bank, broker, or independent adviser for decisions about your finances.",
+    "privacyTitle": "Privacy",
+    "privacyBody": "We do not collect personal data through the guides. If the investment planner is added, cookies or analytics may apply — this page will be updated.",
+    "contactTitle": "Contact",
+    "contactBody": "For questions about the site, use the contact details you publish at launch."
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "fundamentals": "Fundamentals",
+    "news": "Market updates"
+  },
+  "articles": {
+    "bolan-grunder": {
+      "cardTitle": "How Swedish mortgages work",
+      "cardDescription": "Interest, fixed periods, and what banks assess."
+    },
+    "kontantinsats-skuldkvot": {
+      "cardTitle": "Down payment and debt ratio",
+      "cardDescription": "Requirements, buffer, and how skuldkvot is calculated."
+    },
+    "bostadsratt-vs-villa": {
+      "cardTitle": "Co-op vs house",
+      "cardDescription": "Monthly fee, association, and ownership differences."
+    },
+    "budget-total-kostnad": {
+      "cardTitle": "Budget and total cost",
+      "cardDescription": "Monthly cost, amortization, and surprise expenses."
+    },
+    "kopprocessen-budgivning": {
+      "cardTitle": "Buying and bidding",
+      "cardDescription": "From viewing to completion in practice."
+    },
+    "due-diligence-forening": {
+      "cardTitle": "Co-op due diligence",
+      "cardDescription": "Annual report, maintenance plan, and red flags."
+    },
+    "forsta-gangskopare-stod": {
+      "cardTitle": "First-time buyers",
+      "cardDescription": "Support, interest deduction, and common myths."
+    }
+  }
+}
