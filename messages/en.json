@@ -40,8 +40,8 @@
   "planner": {
     "title": "Investment planner",
     "subtitle": "Plan your purchase with clear numbers",
-    "description": "Soon you will be able to model loan amount, interest, amortization, and monthly cost. The tool will be built as a separate React app embedded on this page.",
-    "comingSoon": "Coming soon",
+    "description": "Here you are able to model loan amount, interest, amortization, and monthly cost. Get an insight into your loan and investment to make better informed decisions.",
+    "comingSoon": "Now available",
     "placeholderNote": "Reserved mount point for your investment planner (#investment-planner-root)."
   },
   "footer": {

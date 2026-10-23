@@ -2,6 +2,12 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { pageMetadata } from "@/lib/metadata";
 import type { Locale } from "@/i18n/routing";
 
+
+import "./index.css";
+import App from "./App";
+
+
+
 type Props = PageProps<"/[locale]/investment-planner">;
 
 export async function generateMetadata({ params }: Props) {
@@ -22,7 +28,7 @@ export default async function InvestmentPlannerPage({ params }: Props) {
   const t = await getTranslations("planner");
 
   return (
-    <main id="main-content" className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
+    <main id="main-content" className="mx-auto max-w-5xl px-4 py-12 sm:px-6">
       <p className="text-sm font-medium uppercase tracking-wide text-accent">
         {t("comingSoon")}
       </p>
@@ -36,7 +42,8 @@ export default async function InvestmentPlannerPage({ params }: Props) {
         className="mt-10 flex min-h-[280px] items-center justify-center rounded-xl border-2 border-dashed border-border bg-card p-8 text-center text-sm text-stone-500"
         aria-hidden
       >
-        {t("placeholderNote")}
+        {/* {t("placeholderNote")} */}
+        <App />
       </div>
     </main>
   );
