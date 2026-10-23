@@ -1,5 +1,5 @@
 "use client"
-import { useMemo, useState } from "react";
+import { useMemo, useEffect, useState } from "react";
 import {
   calculatePurchase,
   compareDownPayments,
@@ -44,24 +44,52 @@ function NumberInput({
   step?: number;
   suffix?: string;
 }) {
+  const format = (n: number) =>
+    new Intl.NumberFormat("sv-SE").format(n);
+
+  const commitValue = () => {
+    const parsed = parseNumber(
+      inputValue.replace(/\s/g, "").replace(",", "."),
+      value
+    );
+  
+    onChange(parsed);
+    setInputValue(format(parsed));
+  };
+
+  const [inputValue, setInputValue] = useState(format(value));
+
+  useEffect(() => {
+    setInputValue(format(value));
+  }, [value]);
+
   return (
     <label className="field" htmlFor={id}>
-      <span className="field-label">{label}</span>
+      <span className="field-label text-left">{label}</span>
       <div className="field-input-wrap">
         <input
           id={id}
           type="text"
-          value={new Intl.NumberFormat("sv-SE").format(value)}
+          inputMode="decimal"
+          value={inputValue}
           min={min}
           max={max}
           step={step}
-          onChange={(e) => onChange(parseNumber(e.target.value.replace(/\s/g, ""), value))}
+          onChange={(e) => setInputValue(e.target.value)}
+          onBlur={commitValue}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              e.preventDefault();
+              e.currentTarget.blur();
+            }
+          }}
         />
         {suffix && <span className="field-suffix">{suffix}</span>}
       </div>
     </label>
   );
 }
+
 
 
 
@@ -248,12 +276,12 @@ export default function App() {
               suffix="years"
             />
 
-            <Toggle
+            {/* <Toggle
               id="annuity"
               label="Use annuity payments"
               value={inputs.annuity}
               onChange={(v) => update("annuity", v)}
-            />
+            /> */}
 
           </div>
 
