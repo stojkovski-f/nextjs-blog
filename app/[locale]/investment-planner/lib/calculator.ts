@@ -66,7 +66,7 @@ export function calculateMonthlyPayment(
   annualRatePercent: number,
   termYears: number,
   fixedCost: number,
-  annuuity,
+  annuity: boolean,
 ): number {
   if (principal <= 0) return 0;
   if (termYears <= 0) return 0;
@@ -78,7 +78,7 @@ export function calculateMonthlyPayment(
     return principal / numPayments;
   }
 
-  if(annuuity){
+  if(annuity){
     const factor = Math.pow(1 + monthlyRate, numPayments);
     return ((principal * monthlyRate * factor) / (factor - 1))+fixedCost;
   }else{
