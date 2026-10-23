@@ -78,20 +78,22 @@ export function calculateMonthlyPayment(
     return principal / numPayments;
   }
 
-  if(annuity){
-    const factor = Math.pow(1 + monthlyRate, numPayments);
-    return ((principal * monthlyRate * factor) / (factor - 1))+fixedCost;
-  }else{
-  
-        const averageMonthlyInterest =
-        (principal / 2)  * (annualRatePercent / 100) / 12;
 
+
+  // if(annuity){
+  //   const factor = Math.pow(1 + monthlyRate, numPayments);
+  //   return ((principal * monthlyRate * factor) / (factor - 1))+fixedCost;
+  // }else{
+  
+        const averageMonthlyInterest = principal * monthlyRate;
+        const monthlyAmortization = principal / numPayments;
+        
         return (
-          principal / numPayments +
+          monthlyAmortization +
           averageMonthlyInterest +
           fixedCost
         );
-  }
+  // }
   
 }
 
