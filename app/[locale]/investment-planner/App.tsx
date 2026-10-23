@@ -340,6 +340,10 @@ export default function App() {
                 label={`Interest per month`}
                 value={formatCurrency(result.interestPerMonth)}
               />
+               <ResultRow
+                label="Monthly Amortization"
+                value={formatCurrency(result.loanAmount / result.numPayments)}
+              />
             </div>
               <br></br>
             <div className="result-group">
