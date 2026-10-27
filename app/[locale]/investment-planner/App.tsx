@@ -404,11 +404,11 @@ export default function App() {
               />
                <ResultRow
                 label="Monthly Amortization (investment)"
-                value={formatCurrency(result.loanAmount / result.numPayments)}
+                value={formatCurrency(result.monthlyAmortization)}
               />
               <ResultRow
                 label="Wasted money per month"
-                value={formatCurrency(result.interestPerMonth + result.fixedCost)}
+                value={formatCurrency(result.wastedMoneyPerMonth)}
               />
             </div>
               <br></br>
@@ -437,11 +437,11 @@ export default function App() {
               <h3>Sell after {result.sellAfterYears} year{result.sellAfterYears === 1 ? "" : "s"}</h3>
               <ResultRow
                 label={`Total wasted money in ${result.sellAfterYears} year${result.sellAfterYears === 1 ? "" : "s"}`}
-                value={formatCurrency(result.totalPurchaseCosts + (12 * result.sellAfterYears * result.fixedCost) + (result.interestPerMonth *12*result.sellAfterYears))}
+                value={formatCurrency(result.totalWastedMoneyUntilSale)}
               />
               <ResultRow
                 label="Sell to break even"
-                value={formatCurrency(result.totalPurchaseCosts + (12 * result.sellAfterYears * result.fixedCost) + (result.interestPerMonth *12*result.sellAfterYears)+inputs.apartmentPrice)}
+                value={formatCurrency(result.sellToBreakEven)}
               />
             </div>
             <br></br>

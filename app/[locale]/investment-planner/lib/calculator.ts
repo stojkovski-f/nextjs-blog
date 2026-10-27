@@ -30,6 +30,10 @@ export interface CalculatorResult {
   numPayments: number;
   annuity: boolean;
   interestPerMonth: number;
+  monthlyAmortization: number;
+  wastedMoneyPerMonth: number;
+  totalWastedMoneyUntilSale: number;
+  sellToBreakEven: number;
   allMonthlyPayments: MonthlyPayment[];
 }
 
@@ -178,6 +182,15 @@ export function calculatePurchase(inputs: CalculatorInputs): CalculatorResult {
   const totalCostOfOwnership =
     apartmentPrice + totalInterest + totalPurchaseCosts;
 
+  const monthlyAmortization = numPayments > 0 ? loanAmount / numPayments : 0;
+  const wastedMoneyPerMonth = interestPerMonth + fixedCost;
+  const monthsUntilSale = 12 * sellAfterYears;
+  const totalWastedMoneyUntilSale =
+    totalPurchaseCosts +
+    monthsUntilSale * fixedCost +
+    interestPerMonth * monthsUntilSale;
+  const sellToBreakEven = totalWastedMoneyUntilSale + apartmentPrice;
+
     // Get a plan of all monthly payments
   const allMonthlyPayments = calculateAllMonthlyPayments(loanAmount, annualInterestRate, loanTermYears, fixedCost);
 
@@ -199,6 +212,10 @@ export function calculatePurchase(inputs: CalculatorInputs): CalculatorResult {
     numPayments,
     annuity,
     interestPerMonth,
+    monthlyAmortization,
+    wastedMoneyPerMonth,
+    totalWastedMoneyUntilSale,
+    sellToBreakEven,
     allMonthlyPayments,
   };
 }
