@@ -163,14 +163,32 @@ function ResultRow({
   label,
   value,
   highlight,
+  tooltip,
 }: {
   label: string;
   value: string;
   highlight?: boolean;
+  tooltip?: string;
 }) {
   return (
     <div className={`result-row${highlight ? " highlight" : ""}`}>
-      <span>{label}</span>
+      <span className="result-row-label">
+        {label}
+        {tooltip ? (
+          <span className="info-tip">
+            <button
+              type="button"
+              className="info-tip-icon"
+              aria-label={`More information: ${tooltip}`}
+            >
+              ?
+            </button>
+            <span className="info-tip-bubble" role="tooltip">
+              {tooltip}
+            </span>
+          </span>
+        ) : null}
+      </span>
       <strong>{value}</strong>
     </div>
   );
@@ -402,18 +420,25 @@ export default function App() {
                 label={`Interest per month`}
                 value={formatCurrency(result.interestPerMonth)}
               />
-               <ResultRow
+              
+            </div>
+            <br></br>
+            <div className="result-group">
+            <h3>Investment vs. Wasted money</h3>
+            <ResultRow
                 label="Monthly Amortization (investment)"
                 value={formatCurrency(result.monthlyAmortization)}
               />
               <ResultRow
                 label="Wasted money per month"
                 value={formatCurrency(result.wastedMoneyPerMonth)}
+                tooltip="These are ongoingcosts that you will not get back when you sell, like monthly interest and fixed costs"
               />
             </div>
+
               <br></br>
             <div className="result-group">
-              <h3>Wasted Money</h3>
+              <h3>Transaction fees</h3>
               <ResultRow
                 label="Agency fee"
                 value={formatCurrency(result.agencyFee)}
@@ -430,8 +455,8 @@ export default function App() {
                 label="Total purchase fees"
                 value={formatCurrency(result.totalPurchaseCosts)}
               />
-
             </div>
+            
             <br></br>
             <div className="result-group">
               <h3>Sell after {result.sellAfterYears} year{result.sellAfterYears === 1 ? "" : "s"}</h3>
@@ -442,6 +467,10 @@ export default function App() {
               <ResultRow
                 label="Sell to break even"
                 value={formatCurrency(result.sellToBreakEven)}
+              />
+              <ResultRow
+                label="Annual appreciation to break even"
+                value={formatPercent(Math.round((result.sellToBreakEven - inputs.apartmentPrice) / inputs.apartmentPrice*10000/result.sellAfterYears)/100)}
               />
             </div>
             <br></br>
