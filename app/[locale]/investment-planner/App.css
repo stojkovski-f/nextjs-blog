@@ -92,6 +92,17 @@
   box-shadow: 0 0 0 3px rgba(107, 143, 113, 0.15);
 }
 
+.pagination-button {
+  color: #2f5d3a;
+  font-weight: 400;
+  padding: 0.5rem 1rem;
+  border: 1px solid #2f5d3a;
+  cursor: pointer;
+}
+.pagination-button:hover {
+  color: white;
+  background-color: #2f5d3a;
+}
 .field-input-wrap input {
   flex: 1;
   min-width: 0;

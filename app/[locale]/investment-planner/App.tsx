@@ -1,5 +1,5 @@
 "use client"
-import { useMemo, useEffect, useState } from "react";
+import { useMemo, useEffect, useRef, useState } from "react";
 import {
   calculatePurchase,
   compareDownPayments,
@@ -16,6 +16,7 @@ import "./App.css";
 
 
 const DOWN_PAYMENT_PRESETS = [10, 15, 20, 25, 30, 40, 50];
+const INPUT_COMMIT_DELAY_MS = 2000;
 
 
 function parseNumber(value: string, fallback: number): number {
@@ -47,20 +48,39 @@ function NumberInput({
   const format = (n: number) =>
     new Intl.NumberFormat("sv-SE").format(n);
 
-  const commitValue = () => {
+  const [inputValue, setInputValue] = useState(format(value));
+  const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const focusedRef = useRef(false);
+
+  const clearDebounce = () => {
+    if (debounceRef.current !== null) {
+      clearTimeout(debounceRef.current);
+      debounceRef.current = null;
+    }
+  };
+
+  const commitValue = (raw: string) => {
     const parsed = parseNumber(
-      inputValue.replace(/\s/g, "").replace(",", "."),
+      raw.replace(/\s/g, "").replace(",", "."),
       value
     );
-  
     onChange(parsed);
     setInputValue(format(parsed));
   };
 
-  const [inputValue, setInputValue] = useState(format(value));
+  useEffect(() => () => clearDebounce(), []);
 
   useEffect(() => {
-    setInputValue(format(value));
+    setInputValue((current) => {
+      const parsed = parseNumber(
+        current.replace(/\s/g, "").replace(",", "."),
+        Number.NaN
+      );
+      if (parsed === value || focusedRef.current) {
+        return current;
+      }
+      return format(value);
+    });
   }, [value]);
 
   return (
@@ -75,8 +95,22 @@ function NumberInput({
           min={min}
           max={max}
           step={step}
-          onChange={(e) => setInputValue(e.target.value)}
-          onBlur={commitValue}
+          onChange={(e) => {
+            const next = e.target.value;
+            setInputValue(next);
+            clearDebounce();
+            debounceRef.current = setTimeout(() => {
+              commitValue(next);
+            }, INPUT_COMMIT_DELAY_MS);
+          }}
+          onFocus={() => {
+            focusedRef.current = true;
+          }}
+          onBlur={() => {
+            focusedRef.current = false;
+            clearDebounce();
+            commitValue(inputValue);
+          }}
           onKeyDown={(e) => {
             if (e.key === "Enter") {
               e.preventDefault();
@@ -369,8 +403,12 @@ export default function App() {
                 value={formatCurrency(result.interestPerMonth)}
               />
                <ResultRow
-                label="Monthly Amortization"
+                label="Monthly Amortization (investment)"
                 value={formatCurrency(result.loanAmount / result.numPayments)}
+              />
+              <ResultRow
+                label="Wasted money per month"
+                value={formatCurrency(result.interestPerMonth + result.fixedCost)}
               />
             </div>
               <br></br>
@@ -493,6 +531,7 @@ export default function App() {
             </div>
             <div className="pagination">
               <button
+                className="pagination-button"
                 type="button"
                 disabled={currentPage === 1}
                 onClick={() => setCurrentPage(page => page - 1)}
@@ -507,6 +546,7 @@ export default function App() {
          
 
               <button
+                className="pagination-button"
                 type="button"
                 disabled={currentPage === totalPages}
                 onClick={ () => setCurrentPage(page => page + 1)}
