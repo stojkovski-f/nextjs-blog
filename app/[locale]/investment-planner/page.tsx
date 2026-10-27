@@ -37,12 +37,7 @@ export default async function InvestmentPlannerPage({ params }: Props) {
       </h1>
       <p className="mt-2 text-xl text-stone-700">{t("subtitle")}</p>
       <p className="mt-6 leading-relaxed text-stone-600">{t("description")}</p>
-      <div
-        id="investment-planner-root"
-        className="mt-10 flex min-h-[280px] items-center justify-center rounded-xl border-2 border-dashed border-border bg-card p-8 text-center text-sm text-stone-500"
-        aria-hidden
-      >
-        {/* {t("placeholderNote")} */}
+      <div id="investment-planner-root" className="mt-10 w-full min-w-0">
         <App />
       </div>
     </main>

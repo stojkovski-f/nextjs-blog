@@ -1,5 +1,8 @@
 .app {
   min-height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
   padding: 2.5rem 1.25rem 3rem;
 }
 
@@ -33,12 +36,15 @@
 
 .layout {
   max-width: 1100px;
+  width: 100%;
+  min-width: 0;
   margin: 0 auto;
   display: grid;
   gap: 1.25rem;
 }
 
 .panel {
+  min-width: 0;
   background: #ffffff;
   border: 1px solid #dde8df;
   border-radius: 16px;
@@ -55,7 +61,7 @@
 .field-grid {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
 }
 
 .field {
@@ -124,7 +130,7 @@
 
 .metric-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr));
   gap: 0.85rem;
   margin-bottom: 1.25rem;
 }
@@ -161,7 +167,7 @@
 .result-groups {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
 }
 
 .result-group h3 {
@@ -238,7 +244,9 @@
 }
 
 .table-wrap {
+  max-width: 100%;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 table {
@@ -283,6 +291,16 @@ tbody tr.selected td:first-child {
   font-size: 0.85rem;
   color: #6b7f6e;
   line-height: 1.5;
+}
+
+@media (max-width: 639px) {
+  .app {
+    padding: 1rem 0 2rem;
+  }
+
+  .panel {
+    padding: 1rem;
+  }
 }
 
 @media (min-width: 900px) {
