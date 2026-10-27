@@ -43,16 +43,16 @@ type MonthlyPayment = {
 
 
 const DEFAULT_INPUTS: CalculatorInputs = {
-  apartmentPrice: 120_000,
-  squareMeters: 65,
-  downPaymentPercent: 20,
-  annualInterestRate: 4.5,
-  amortizationRate: 4,
+  apartmentPrice: 4_100_000,
+  squareMeters: 40,
+  downPaymentPercent: 10,
+  annualInterestRate: 3.1,
+  amortizationRate: 2,
   fixedCost: 3200,
   sellAfterYears: 5,
-  agencyFeePercent: 2,
-  transferTaxPercent: 2.5,
-  bankFeePercent: 1,
+  agencyFeePercent: 0,
+  transferTaxPercent: 0,
+  bankFeePercent: 0,
   annuity: false,
 };
 

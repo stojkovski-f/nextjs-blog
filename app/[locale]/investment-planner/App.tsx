@@ -443,10 +443,6 @@ export default function App() {
                 label="Sell to break even"
                 value={formatCurrency(result.totalPurchaseCosts + (12 * result.sellAfterYears * result.fixedCost) + (result.interestPerMonth *12*result.sellAfterYears)+inputs.apartmentPrice)}
               />
-              <ResultRow
-                label="Bank fee"
-                value={formatCurrency((result.totalPurchaseCosts + (12 * result.sellAfterYears * result.fixedCost) + (result.interestPerMonth *12*result.sellAfterYears)) / inputs.apartmentPrice * 100)}
-              />
             </div>
             <br></br>
             <div className="result-group">
@@ -460,7 +456,7 @@ export default function App() {
                 value={`${formatNumber(inputs.squareMeters)} m²`}
               />
               <ResultRow
-                label="Total cost (price + interest + fees)"
+                label="Total cost by end of loan term"
                 value={formatCurrency(result.totalCostOfOwnership)}
                 highlight
               />
