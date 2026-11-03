@@ -1,14 +1,13 @@
-function requiredEnv(name: string): string {
-  const value = process.env[name];
-  if (!value) {
-    throw new Error(`Missing ${name}. Copy .env.example to .env.local and fill in your Supabase credentials.`);
-  }
-  return value;
-}
+export function getSupabaseEnv() {
+  const url =
+    process.env.SUPABASE_URL ?? process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const publishableKey =
+    process.env.SUPABASE_PUBLISHABLE_KEY ??
+    process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
 
-export function getSupabasePublicEnv() {
-  return {
-    url: requiredEnv("NEXT_PUBLIC_SUPABASE_URL"),
-    publishableKey: requiredEnv("NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY"),
-  };
+  if (!url || !publishableKey) {
+    return null;
+  }
+
+  return { url, publishableKey };
 }

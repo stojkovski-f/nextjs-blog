@@ -7,6 +7,10 @@ const MAX_COMMENT_LENGTH = 600;
 
 export async function getCalculatorLikeCount(): Promise<number> {
   const supabase = await createClient();
+  if (!supabase) {
+    return 0;
+  }
+
   const { count, error } = await supabase
     .from(TABLE)
     .select("*", { count: "exact", head: true });
@@ -23,6 +27,10 @@ export async function addCalculatorLike(): Promise<
   { id: string } | { error: string }
 > {
   const supabase = await createClient();
+  if (!supabase) {
+    return { error: "Could not save your like. Please try again." };
+  }
+
   const { data, error } = await supabase
     .from(TABLE)
     .insert({ comment: null })
@@ -53,6 +61,10 @@ export async function addCalculatorComment(
   }
 
   const supabase = await createClient();
+  if (!supabase) {
+    return { error: "Could not save your comment. Please try again." };
+  }
+
   const { data, error } = await supabase
     .from(TABLE)
     .update({ comment: trimmed })
