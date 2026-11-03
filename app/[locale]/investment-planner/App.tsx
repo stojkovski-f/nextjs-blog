@@ -404,6 +404,10 @@ export default function App() {
                 label="Total interest over term"
                 value={formatCurrency(result.totalInterest)}
               />
+              <ResultRow
+                label="Fully repaid after"
+                value={` ${formatNumber(result.numPayments/12)} years`}
+              />
             </div>
             <br></br>
             <div className="result-group">

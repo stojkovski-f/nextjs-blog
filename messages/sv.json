@@ -42,7 +42,15 @@
     "subtitle": "Planera ditt bostadsköp med tydliga siffror",
     "description": "Här kommer du snart kunna räkna på lånebelopp, ränta, amortering och månadskostnad. Verktyget byggs som en separat React-app och bäddas in på denna sida.",
     "comingSoon": "Kommer snart",
-    "placeholderNote": "Plats reserverad för din investeringsplanerare (#investment-planner-root)."
+    "placeholderNote": "Plats reserverad för din investeringsplanerare (#investment-planner-root).",
+    "likePrompt": "Tyckte du att kalkylatorn var användbar?",
+    "likesLabel": "gillningar",
+    "likeAria": "Gilla kalkylatorn, {count} gillningar",
+    "thanksTitle": "Tack för att du använder appen!",
+    "thanksBody": "Berätta gärna vad du gillade eller vad du vill att vi förbättrar",
+    "commentPlaceholder": "Din feedback",
+    "submit": "Skicka",
+    "submitSuccess": "Tack, vi har tagit emot din feedback."
   },
   "footer": {
     "disclaimer": "Innehållet är utbildande och utgör inte finansiell rådgivning.",

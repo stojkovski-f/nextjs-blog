@@ -5,6 +5,8 @@ import type { Locale } from "@/i18n/routing";
 
 import "./index.css";
 import App from "./App";
+import { CalculatorFeedback } from "./CalculatorFeedback";
+import { getCalculatorLikeCount } from "./actions";
 
 
 
@@ -26,6 +28,7 @@ export default async function InvestmentPlannerPage({ params }: Props) {
   setRequestLocale(locale);
 
   const t = await getTranslations("planner");
+  const likeCount = await getCalculatorLikeCount();
 
   return (
     <main id="main-content" className="mx-auto max-w-5xl px-4 py-12 sm:px-6">
@@ -37,6 +40,7 @@ export default async function InvestmentPlannerPage({ params }: Props) {
       </h1>
       <p className="mt-2 text-xl text-stone-700">{t("subtitle")}</p>
       <p className="mt-6 leading-relaxed text-stone-600">{t("description")}</p>
+      <CalculatorFeedback initialLikeCount={likeCount} />
       <div id="investment-planner-root" className="mt-10 w-full min-w-0">
         <App />
       </div>

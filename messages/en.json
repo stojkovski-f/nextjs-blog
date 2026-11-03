@@ -42,7 +42,15 @@
     "subtitle": "Plan your purchase with clear numbers",
     "description": "Here you are able to model loan amount, interest, amortization, and monthly cost. Get an insight into your loan and investment to make better informed decisions.",
     "comingSoon": "Now available",
-    "placeholderNote": "Reserved mount point for your investment planner (#investment-planner-root)."
+    "placeholderNote": "Reserved mount point for your investment planner (#investment-planner-root).",
+    "likePrompt": "Did you found this calculator useful?",
+    "likesLabel": "likes",
+    "likeAria": "Like this calculator, {count} likes",
+    "thanksTitle": "Thanks for using the app!",
+    "thanksBody": "Tell us a bit more what you liked or what you would like improved",
+    "commentPlaceholder": "Your feedback",
+    "submit": "Submit",
+    "submitSuccess": "Thanks, we received your feedback."
   },
   "footer": {
     "disclaimer": "Content is educational and is not financial advice.",
