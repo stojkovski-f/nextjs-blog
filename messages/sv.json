@@ -52,6 +52,18 @@
     "submit": "Skicka",
     "submitSuccess": "Tack, vi har tagit emot din feedback."
   },
+  "reviews": {
+    "title": "Kalkylatorrecensioner",
+    "privateNote": "Den här sidan är privat och indexeras inte i sökresultat.",
+    "passwordLabel": "Lösenord",
+    "unlock": "Lås upp",
+    "unlocking": "Kontrollerar…",
+    "lock": "Lås",
+    "notConfigured": "Sätt REVIEWS_PAGE_PASSWORD i miljön för att aktivera den här sidan.",
+    "likesWithoutFeedback": "Gillningar utan skriftlig feedback",
+    "totalLikes": "{count} gillningar totalt",
+    "empty": "Inga skriftliga recensioner ännu."
+  },
   "footer": {
     "disclaimer": "Innehållet är utbildande och utgör inte finansiell rådgivning.",
     "notAdvice": "Inte finansiell rådgivning",

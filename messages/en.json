@@ -52,6 +52,18 @@
     "submit": "Submit",
     "submitSuccess": "Thanks, we received your feedback."
   },
+  "reviews": {
+    "title": "Calculator reviews",
+    "privateNote": "This page is private and is not listed in search results.",
+    "passwordLabel": "Password",
+    "unlock": "Unlock",
+    "unlocking": "Checking…",
+    "lock": "Lock",
+    "notConfigured": "Set REVIEWS_PAGE_PASSWORD in your environment to enable this page.",
+    "likesWithoutFeedback": "Likes without written feedback",
+    "totalLikes": "{count} total likes",
+    "empty": "No written reviews yet."
+  },
   "footer": {
     "disclaimer": "Content is educational and is not financial advice.",
     "notAdvice": "Not financial advice",
