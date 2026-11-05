@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { LanguageSwitcher } from "./LanguageSwitcher";
@@ -9,12 +10,22 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-card/95 backdrop-blur">
       <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-4 px-4 py-4 sm:px-6">
-        <Link href="/" className="group">
-          <span className="block text-lg font-semibold tracking-tight text-stone-900 group-hover:text-accent">
-            {site("name")}
-          </span>
-          <span className="hidden text-xs text-stone-500 sm:block">
-            {site("tagline")}
+        <Link href="/" className="group flex items-center gap-3">
+          <Image
+            src="/BrandLogo.png"
+            alt=""
+            width={40}
+            height={40}
+            className="h-10 w-10 shrink-0"
+            priority
+          />
+          <span>
+            <span className="block text-lg font-semibold tracking-tight text-stone-900 group-hover:text-accent">
+              {site("name")}
+            </span>
+            <span className="hidden text-xs text-stone-500 sm:block">
+              {site("tagline")}
+            </span>
           </span>
         </Link>
         <nav
