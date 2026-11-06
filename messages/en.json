@@ -1,7 +1,7 @@
 {
   "site": {
-    "name": "Home & Mortgage",
-    "tagline": "Guides for first-time buyers in Sweden"
+    "name": "Bostadsklok",
+    "tagline": "Insights for first-time buyers in Sweden"
   },
   "nav": {
     "fundamentals": "Fundamentals",
@@ -22,7 +22,7 @@
     "newsIntro": "Short updates on rates, prices, and trends while you plan your purchase.",
     "viewAllNews": "All updates",
     "plannerTitle": "Investment planner",
-    "plannerDescription": "Try scenarios for down payment, monthly cost, and amortization — the tool is coming soon.",
+    "plannerDescription": "Try scenarios for down payment, monthly cost, and amortization — the tool is free to use without registration.",
     "plannerCta": "Open planner"
   },
   "fundamentals": {

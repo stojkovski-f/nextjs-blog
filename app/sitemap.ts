@@ -15,6 +15,17 @@ const staticPaths = [
   "/contact",
 ];
 
+function languageAlternates(pathWithoutLocale: string) {
+  const languages: Record<string, string> = {};
+  for (const locale of routing.locales) {
+    languages[locale === "sv" ? "sv-SE" : "en"] = absoluteUrl(
+      `/${locale}${pathWithoutLocale}`,
+    );
+  }
+  languages["x-default"] = absoluteUrl(`/sv${pathWithoutLocale}`);
+  return { languages };
+}
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const { news } = await getAllStaticSlugs();
   const entries: MetadataRoute.Sitemap = [];
@@ -25,20 +36,25 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         url: absoluteUrl(`/${locale}${path}`),
         changeFrequency: path === "" || path === "/news" ? "weekly" : "monthly",
         priority: path === "" ? 1 : 0.8,
+        alternates: languageAlternates(path),
       });
     }
     for (const slug of FOUNDATIONAL_SLUGS) {
+      const path = `/fundamentals/${slug.slug}`;
       entries.push({
-        url: absoluteUrl(`/${locale}/fundamentals/${slug.slug}`),
+        url: absoluteUrl(`/${locale}${path}`),
         changeFrequency: "monthly",
         priority: 0.9,
+        alternates: languageAlternates(path),
       });
     }
     for (const slug of news) {
+      const path = `/news/${slug}`;
       entries.push({
-        url: absoluteUrl(`/${locale}/news/${slug}`),
+        url: absoluteUrl(`/${locale}${path}`),
         changeFrequency: "weekly",
         priority: 0.7,
+        alternates: languageAlternates(path),
       });
     }
   }
