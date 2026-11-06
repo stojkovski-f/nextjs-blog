@@ -96,9 +96,13 @@
     "notAdviceTitle": "Not financial advice",
     "notAdviceBody": "Information on this site is general and educational. Contact your bank, broker, or independent adviser for decisions about your finances.",
     "privacyTitle": "Privacy",
-    "privacyBody": "We do not collect personal data through the guides. If the investment planner is added, cookies or analytics may apply — this page will be updated.",
+    "privacyBody": "We do not collect names, email addresses, or other identifying information. You can read the guides and use the investment planner without creating an account.",
+    "privacyFeedback": "Likes and optional comments on the calculator are anonymous. They are not linked to a name, account, or any other personal details.",
+    "privacyLocal": "Numbers you enter in the calculator stay in your browser and are not saved on our servers. We do not use analytics or advertising cookies.",
+    "privacyDonate": "If you choose to donate, PayPal handles that payment on their site under their own privacy policy.",
     "contactTitle": "Contact",
-    "contactBody": "For questions about the site, use the contact details you publish at launch."
+    "contactMeta": "If you have any questions about this website, please contact me through LinkedIn.",
+    "contactBody": "If you have any questions about this website, please contact me through <linkedin>LinkedIn</linkedin>."
   },
   "breadcrumb": {
     "home": "Home",

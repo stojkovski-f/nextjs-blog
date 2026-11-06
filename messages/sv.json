@@ -96,9 +96,13 @@
     "notAdviceTitle": "Inte finansiell rådgivning",
     "notAdviceBody": "Informationen på denna webbplats är allmän och utbildande. Kontakta bank, mäklare eller oberoende rådgivare för beslut som gäller din ekonomi.",
     "privacyTitle": "Integritet",
-    "privacyBody": "Vi samlar inte in personuppgifter via grundguiderna. Om investeringsplaneraren läggs till kan cookies eller analys användas — då uppdateras denna sida.",
+    "privacyBody": "Vi samlar inte in namn, e-postadresser eller andra identifierande uppgifter. Du kan läsa guiderna och använda investeringsplaneraren utan att skapa ett konto.",
+    "privacyFeedback": "Gillningar och valfria kommentarer på kalkylatorn är anonyma. De kopplas inte till ett namn, konto eller några andra personuppgifter.",
+    "privacyLocal": "Siffror du anger i kalkylatorn stannar i din webbläsare och sparas inte på våra servrar. Vi använder inte analys- eller reklamcookies.",
+    "privacyDonate": "Om du väljer att donera hanterar PayPal betalningen på sin egen webbplats enligt deras integritetspolicy.",
     "contactTitle": "Kontakt",
-    "contactBody": "För frågor om webbplatsen, använd kontaktuppgifterna du anger vid lansering."
+    "contactMeta": "Om du har frågor om den här webbplatsen, kontakta mig gärna via LinkedIn.",
+    "contactBody": "Om du har frågor om den här webbplatsen, kontakta mig gärna via <linkedin>LinkedIn</linkedin>."
   },
   "breadcrumb": {
     "home": "Start",

@@ -23,7 +23,12 @@ export default async function PrivacyPage({ params }: Props) {
   return (
     <main id="main-content" className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
       <h1 className="text-3xl font-semibold text-stone-900">{t("privacyTitle")}</h1>
-      <p className="mt-6 leading-relaxed text-stone-600">{t("privacyBody")}</p>
+      <div className="mt-6 space-y-4 leading-relaxed text-stone-600">
+        <p>{t("privacyBody")}</p>
+        <p>{t("privacyFeedback")}</p>
+        <p>{t("privacyLocal")}</p>
+        <p>{t("privacyDonate")}</p>
+      </div>
     </main>
   );
 }
