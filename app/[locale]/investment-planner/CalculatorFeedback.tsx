@@ -2,11 +2,10 @@
 
 import { useState, useTransition } from "react";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { addCalculatorComment, addCalculatorLike } from "./actions";
 
 const MAX_COMMENT_LENGTH = 600;
-const PAYPAL_DONATE_URL =
-  "https://www.paypal.com/donate/?hosted_button_id=BLEA94AY958HC";
 
 export function CalculatorFeedback({
   initialLikeCount,
@@ -93,14 +92,12 @@ export function CalculatorFeedback({
                 <p className="mt-1 whitespace-pre-line text-sm text-stone-600">
                   {t.rich("submitSuccessBody", {
                     donate: (chunks) => (
-                      <a
-                        href={PAYPAL_DONATE_URL}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                      <Link
+                        href="/about"
                         className="font-medium text-accent underline underline-offset-2 hover:text-teal-800"
                       >
                         {chunks}
-                      </a>
+                      </Link>
                     ),
                   })}
                 </p>

@@ -103,8 +103,8 @@
     "privacyTitle": "Privacy",
     "privacyBody": "We do not collect names, email addresses, or other identifying information. You can read the guides and use the investment planner without creating an account.",
     "privacyFeedback": "Likes and optional comments on the calculator are anonymous. They are not linked to a name, account, or any other personal details.",
-    "privacyLocal": "Numbers you enter in the calculator stay in your browser and are not saved on our servers. We do not use analytics or advertising cookies.",
-    "privacyDonate": "If you choose to donate, PayPal handles that payment on their site under their own privacy policy.",
+    "privacyLocal": "Numbers you enter in the calculator stay in your browser and are not saved on our servers. We use Vercel Analytics purely to understand how the site is used so we can improve the experience. It does not use advertising cookies or identify you.",
+    "privacyDonate": "If you donate with PayPal, PayPal processes the payment on their site under their own privacy policy. If you donate with Swish, Swish will show us the name and phone number linked to your Swish account — that is how Swish payments work. We receive that only because you chose to send a donation, and we do not use it for marketing or to identify you on this website.",
     "contactTitle": "Contact",
     "contactMeta": "If you have any questions about this website, please contact me through LinkedIn.",
     "contactBody": "If you have any questions about this website, please contact me through <linkedin>LinkedIn</linkedin>."
