@@ -5,13 +5,16 @@
   },
   "nav": {
     "fundamentals": "Fundamentals",
-    "news": "Market updates",
+    "news": "News",
     "planner": "Investment planner",
+    "newBadge": "New",
+    "about": "About",
     "skipToContent": "Skip to content"
   },
   "home": {
     "heroTitle": "Understand mortgages and buying a home in Sweden",
     "heroSubtitle": "Seven foundational guides for first-time buyers — plus the latest on the Stockholm and national housing market.",
+    "heroCta": "Explore our guides →",
     "fundamentalsTitle": "Foundational guides",
     "fundamentalsIntro": "Start here to learn about mortgages, costs, and the buying process before you go to viewings.",
     "viewAllFundamentals": "View all guides",
@@ -50,7 +53,25 @@
     "thanksBody": "Tell us a bit more what you liked or what you would like improved",
     "commentPlaceholder": "Your feedback",
     "submit": "Submit",
-    "submitSuccess": "Thanks, we received your feedback."
+    "submitSuccessTitle": "We received your feedback!",
+    "submitSuccessBody": "If you found the app useful please consider supporting \nthe project with a small <donate>donation</donate>."
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "About this project",
+    "greeting": "Hi, I’m Filip Stojkovski.",
+    "intro": "Thank you for using this app. I created this free project so people can gain key knowledge and use our calculator to get insights and make better decisions when facing the big financial choice of buying a first home.",
+    "support": "Please consider supporting this project. It is funded by donations, and that is the only way to keep it going, open, and free.",
+    "closing": "Thank you!",
+    "donateCta": "Donate with PayPal",
+    "calculatorCta": "Try the calculator"
+  },
+  "donate": {
+    "eyebrow": "Donation",
+    "title": "Thank you",
+    "body": "Thank you for your donation. Your support helps keep these guides and the calculator available for first-time buyers.",
+    "browseArticles": "Keep browsing the articles",
+    "goToCalculator": "Go to the calculator"
   },
   "reviews": {
     "title": "Calculator reviews",
@@ -66,6 +87,7 @@
   },
   "footer": {
     "disclaimer": "Content is educational and is not financial advice.",
+    "about": "About",
     "notAdvice": "Not financial advice",
     "privacy": "Privacy",
     "contact": "Contact"

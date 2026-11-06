@@ -11,5 +11,5 @@ export default async function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/", "/(sv|en)/:path*"],
+  matcher: ["/", "/tack", "/about", "/(sv|en)/:path*"],
 };

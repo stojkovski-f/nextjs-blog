@@ -7,11 +7,14 @@
     "fundamentals": "Grundläggande",
     "news": "Marknadsnytt",
     "planner": "Investeringsplanerare",
+    "newBadge": "Ny",
+    "about": "Om projektet",
     "skipToContent": "Hoppa till innehåll"
   },
   "home": {
     "heroTitle": "Förstå bolån och bostadsköp i Sverige",
     "heroSubtitle": "Sju grundguider för förstagångsköpare — plus aktuella nyheter om bostadsmarknaden i Stockholm och riket.",
+    "heroCta": "Utforska våra guider →",
     "fundamentalsTitle": "Grundläggande guider",
     "fundamentalsIntro": "Börja här för att förstå bolån, kostnader och köpprocessen innan du går på visning.",
     "viewAllFundamentals": "Se alla grundguider",
@@ -40,8 +43,8 @@
   "planner": {
     "title": "Investeringsplanerare",
     "subtitle": "Planera ditt bostadsköp med tydliga siffror",
-    "description": "Här kommer du snart kunna räkna på lånebelopp, ränta, amortering och månadskostnad. Verktyget byggs som en separat React-app och bäddas in på denna sida.",
-    "comingSoon": "Kommer snart",
+    "description": "Här får du hjälp att räkna på lånebelopp, ränta, amortering och månadskostnader för att förstå vad ditt framtida bostadsköp kan innebära för din ekonomi.",
+    "comingSoon": "Nu tillgängligt",
     "placeholderNote": "Plats reserverad för din investeringsplanerare (#investment-planner-root).",
     "likePrompt": "Tyckte du att kalkylatorn var användbar?",
     "likesLabel": "gillningar",
@@ -50,7 +53,25 @@
     "thanksBody": "Berätta gärna vad du gillade eller vad du vill att vi förbättrar",
     "commentPlaceholder": "Din feedback",
     "submit": "Skicka",
-    "submitSuccess": "Tack, vi har tagit emot din feedback."
+    "submitSuccessTitle": "Vi har tagit emot din feedback!",
+    "submitSuccessBody": "Om du tyckte att appen var användbar, överväg gärna att stötta projektet med en <donate>liten donation</donate>. Tack!"
+  },
+  "about": {
+    "eyebrow": "Om projektet",
+    "title": "Om det här projektet",
+    "greeting": "Hej, jag heter Filip Stojkovski.",
+    "intro": "Tack för att du använder den här appen. Jag har skapat det här gratisprojektet så att fler kan få viktig kunskap och använda vår kalkylator för att få insikter och fatta bättre beslut när de står inför det stora ekonomiska valet att köpa sin första bostad.",
+    "support": "Överväg gärna att stötta projektet. Det finansieras av donationer, och det är det enda sättet att hålla det igång, öppet och gratis.",
+    "closing": "Tack!",
+    "donateCta": "Donera med PayPal",
+    "calculatorCta": "Testa kalkylatorn"
+  },
+  "donate": {
+    "eyebrow": "Donation",
+    "title": "Tack",
+    "body": "Tack för din donation. Ditt stöd hjälper oss att hålla guiderna och kalkylatorn tillgängliga för förstagångsköpare.",
+    "browseArticles": "Fortsätt läsa artiklarna",
+    "goToCalculator": "Gå till kalkylatorn"
   },
   "reviews": {
     "title": "Kalkylatorrecensioner",
@@ -66,6 +87,7 @@
   },
   "footer": {
     "disclaimer": "Innehållet är utbildande och utgör inte finansiell rådgivning.",
+    "about": "Om projektet",
     "notAdvice": "Inte finansiell rådgivning",
     "privacy": "Integritet",
     "contact": "Kontakt"

@@ -32,14 +32,23 @@ export function Header() {
           className="flex flex-wrap items-center gap-4 text-sm font-medium text-stone-700"
           aria-label="Main"
         >
+          <Link href="/about" className="hover:text-accent">
+            {t("about")}
+          </Link>
           <Link href="/fundamentals" className="hover:text-accent">
             {t("fundamentals")}
           </Link>
           <Link href="/news" className="hover:text-accent">
             {t("news")}
           </Link>
-          <Link href="/investment-planner" className="hover:text-accent">
+          <Link
+            href="/investment-planner"
+            className="inline-flex items-center gap-1.5 hover:text-accent"
+          >
             {t("planner")}
+            <span className="-rotate-6 rounded-[3px] bg-yellow-300 px-1.5 py-0.5 text-[10px] font-bold uppercase leading-none tracking-wide text-black shadow-sm">
+              {t("newBadge")}
+            </span>
           </Link>
           <LanguageSwitcher />
         </nav>

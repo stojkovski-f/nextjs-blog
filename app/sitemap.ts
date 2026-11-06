@@ -9,6 +9,7 @@ const staticPaths = [
   "/fundamentals",
   "/news",
   "/investment-planner",
+  "/about",
   "/not-financial-advice",
   "/privacy",
   "/contact",

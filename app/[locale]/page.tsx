@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { ArticleCard } from "@/components/ArticleCard";
@@ -30,13 +31,33 @@ export default async function HomePage({ params }: Props) {
 
   return (
     <main id="main-content" className="mx-auto max-w-5xl px-4 py-12 sm:px-6">
-      <section className="rounded-2xl border border-border bg-gradient-to-br from-teal-50 to-white p-8 sm:p-10">
-        <h1 className="text-3xl font-semibold tracking-tight text-stone-900 sm:text-4xl">
-          {t("heroTitle")}
-        </h1>
-        <p className="mt-4 max-w-2xl text-lg leading-relaxed text-stone-600">
-          {t("heroSubtitle")}
-        </p>
+      <section className="relative isolate overflow-hidden rounded-2xl min-h-[360px] sm:min-h-[420px]">
+        <Image
+          src="/hero-stockholm-apartment.jpg"
+          alt=""
+          fill
+          priority
+          sizes="(min-width: 1024px) 64rem, 100vw"
+          className="object-cover object-[70%_center]"
+        />
+        <div
+          className="absolute inset-0 bg-gradient-to-r from-white from-[36%] via-white/95 via-[48%] to-transparent"
+          aria-hidden
+        />
+        <div className="relative z-10 flex min-h-[360px] max-w-lg flex-col justify-center px-6 py-10 sm:min-h-[420px] sm:px-10 sm:py-16">
+          <h1 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+            {t("heroTitle")}
+          </h1>
+          <p className="mt-4 text-base leading-relaxed text-slate-700 sm:text-lg">
+            {t("heroSubtitle")}
+          </p>
+          <Link
+            href="/fundamentals"
+            className="mt-8 inline-flex w-fit items-center rounded-full bg-accent px-5 py-2.5 text-sm font-medium text-white hover:bg-teal-800"
+          >
+            {t("heroCta")}
+          </Link>
+        </div>
       </section>
       
       <section className="mt-14 rounded-2xl border border-teal-200 bg-accent-muted/40 p-8">

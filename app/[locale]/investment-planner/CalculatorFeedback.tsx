@@ -5,6 +5,8 @@ import { useTranslations } from "next-intl";
 import { addCalculatorComment, addCalculatorLike } from "./actions";
 
 const MAX_COMMENT_LENGTH = 600;
+const PAYPAL_DONATE_URL =
+  "https://www.paypal.com/donate/?hosted_button_id=BLEA94AY958HC";
 
 export function CalculatorFeedback({
   initialLikeCount,
@@ -56,7 +58,7 @@ export function CalculatorFeedback({
   };
 
   return (
-    <div className="mt-3 flex flex-col items-start">
+    <div className="mt-4 flex flex-col items-start">
       <div className="flex flex-wrap items-center gap-2">
         <p className="text-stone-700 font-bold">{t("likePrompt")}</p>
         <button
@@ -83,43 +85,62 @@ export function CalculatorFeedback({
       >
         <div className="overflow-hidden" aria-hidden={!accordionOpen}>
           <div className="mt-3 rounded-lg border border-stone-200 bg-card p-4">
-            <p className="font-medium text-stone-900">{t("thanksTitle")}</p>
-            <p className="mt-1 text-sm text-stone-600">{t("thanksBody")}</p>
-
             {submitted ? (
-              <p className="mt-3 text-sm text-stone-700">{t("submitSuccess")}</p>
+              <>
+                <p className="font-medium text-stone-900">
+                  {t("submitSuccessTitle")}
+                </p>
+                <p className="mt-1 whitespace-pre-line text-sm text-stone-600">
+                  {t.rich("submitSuccessBody", {
+                    donate: (chunks) => (
+                      <a
+                        href={PAYPAL_DONATE_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-medium text-accent underline underline-offset-2 hover:text-teal-800"
+                      >
+                        {chunks}
+                      </a>
+                    ),
+                  })}
+                </p>
+              </>
             ) : (
-              <form
-                className="mt-3 flex flex-col gap-2 sm:flex-row sm:items-end"
-                onSubmit={handleSubmit}
-              >
-                <div className="min-w-0 flex-1">
-                  <label htmlFor="calculator-feedback-comment" className="sr-only">
-                    {t("thanksBody")}
-                  </label>
-                  <textarea
-                    id="calculator-feedback-comment"
-                    value={comment}
-                    onChange={(event) =>
-                      setComment(event.target.value.slice(0, MAX_COMMENT_LENGTH))
-                    }
-                    maxLength={MAX_COMMENT_LENGTH}
-                    rows={3}
-                    className="w-full rounded-md border border-stone-300 bg-white px-3 py-2 text-sm text-stone-900 outline-none focus:border-stone-900"
-                    placeholder={t("commentPlaceholder")}
-                  />
-                  <p className="mt-1 text-right text-xs text-stone-500">
-                    {comment.length}/{MAX_COMMENT_LENGTH}
-                  </p>
-                </div>
-                <button
-                  type="submit"
-                  disabled={isPending || comment.trim().length === 0}
-                  className="rounded-md border border-black bg-transparent px-4 py-2 text-sm text-stone-900 disabled:cursor-not-allowed disabled:opacity-50"
+              <>
+                <p className="font-medium text-stone-900">{t("thanksTitle")}</p>
+                <p className="mt-1 text-sm text-stone-600">{t("thanksBody")}</p>
+                <form
+                  className="mt-3 flex flex-col gap-2"
+                  onSubmit={handleSubmit}
                 >
-                  {t("submit")}
-                </button>
-              </form>
+                  <div className="w-full">
+                    <label htmlFor="calculator-feedback-comment" className="sr-only">
+                      {t("thanksBody")}
+                    </label>
+                    <textarea
+                      id="calculator-feedback-comment"
+                      value={comment}
+                      onChange={(event) =>
+                        setComment(event.target.value.slice(0, MAX_COMMENT_LENGTH))
+                      }
+                      maxLength={MAX_COMMENT_LENGTH}
+                      rows={3}
+                      className="w-full rounded-md border border-stone-300 bg-white px-3 py-2 text-sm text-stone-900 outline-none focus:border-stone-900"
+                      placeholder={t("commentPlaceholder")}
+                    />
+                    <p className="mt-1 text-right text-xs text-stone-500">
+                      {comment.length}/{MAX_COMMENT_LENGTH}
+                    </p>
+                  </div>
+                  <button
+                    type="submit"
+                    disabled={isPending || comment.trim().length === 0}
+                    className="w-full sm:w-auto self-start rounded-md border border-black bg-transparent px-4 py-2 text-sm text-stone-900 disabled:cursor-not-allowed disabled:opacity-50"
+                  >
+                    {t("submit")}
+                  </button>
+                </form>
+              </>
             )}
           </div>
         </div>

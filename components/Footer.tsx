@@ -10,6 +10,11 @@ export function Footer() {
         <p className="text-sm text-stone-600">{t("disclaimer")}</p>
         <ul className="mt-4 flex flex-wrap gap-4 text-sm font-medium">
           <li>
+            <Link href="/about" className="text-accent hover:underline">
+              {t("about")}
+            </Link>
+          </li>
+          <li>
             <Link href="/not-financial-advice" className="text-accent hover:underline">
               {t("notAdvice")}
             </Link>
