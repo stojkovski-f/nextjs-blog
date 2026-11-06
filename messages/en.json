@@ -64,6 +64,11 @@
     "support": "Please consider supporting this project. It is funded by donations, and that is the only way to keep it going, open, and free.",
     "closing": "Thank you!",
     "donateCta": "Donate with PayPal",
+    "donateSwishCta": "Donate with Swish",
+    "donateSwishDialogTitle": "Donate with Swish",
+    "donateSwishDialogHint": "Open Swish on your phone and scan this code. You can close this window at any time.",
+    "donateSwishQrAlt": "Swish QR code for donation to 070-436 76 65",
+    "donateSwishClose": "Close",
     "calculatorCta": "Try the calculator"
   },
   "donate": {

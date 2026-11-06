@@ -64,6 +64,11 @@
     "support": "Överväg gärna att stötta projektet. Det finansieras av donationer, och det är det enda sättet att hålla det igång, öppet och gratis.",
     "closing": "Tack!",
     "donateCta": "Donera med PayPal",
+    "donateSwishCta": "Donera med Swish",
+    "donateSwishDialogTitle": "Donera med Swish",
+    "donateSwishDialogHint": "Öppna Swish i telefonen och skanna den här koden. Du kan stänga fönstret när som helst.",
+    "donateSwishQrAlt": "Swish-QR-kod för donation till 070-436 76 65",
+    "donateSwishClose": "Stäng",
     "calculatorCta": "Testa kalkylatorn"
   },
   "donate": {

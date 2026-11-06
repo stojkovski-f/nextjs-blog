@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import { aboutCtaClassName, PayPalLogo } from "@/components/BrandIcons";
+import { SwishDonateButton } from "@/components/SwishDonateButton";
 import { pageMetadata } from "@/lib/metadata";
 import type { Locale } from "@/i18n/routing";
 
@@ -56,13 +58,15 @@ export default async function AboutPage({ params }: Props) {
           href={PAYPAL_DONATE_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center rounded-full bg-accent px-5 py-2.5 text-sm font-medium text-white hover:bg-teal-800"
+          className={aboutCtaClassName}
         >
+          <PayPalLogo />
           {t("donateCta")}
         </a>
+        <SwishDonateButton />
         <Link
           href="/investment-planner"
-          className="inline-flex items-center justify-center rounded-full border border-stone-300 bg-white px-5 py-2.5 text-sm font-medium text-stone-800 hover:border-stone-900"
+          className={aboutCtaClassName}
         >
           {t("calculatorCta")}
         </Link>
